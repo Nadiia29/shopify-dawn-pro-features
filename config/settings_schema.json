@@ -1385,7 +1385,6 @@
       {
         "type": "text",
         "id": "predictive_search_popular_searches",
-        "default": "",
         "label": "t:settings_schema.search_input.settings.predictive_search_popular_searches.label",
         "info": "t:settings_schema.search_input.settings.predictive_search_popular_searches.info"
       }
