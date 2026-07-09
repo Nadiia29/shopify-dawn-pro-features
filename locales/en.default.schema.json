@@ -1844,6 +1844,10 @@
             "option_3": "Bulk"
           }
         },
+        "enable_quick_view": {
+          "label": "Enable quick view",
+          "info": "Lets customers preview the full product page in a modal without leaving this grid"
+        },
         "columns_mobile": {
           "label": "Mobile columns",
           "options__1": {

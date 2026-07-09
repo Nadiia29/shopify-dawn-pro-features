@@ -128,6 +128,7 @@
                   skip_styles: skip_card_product_styles,
                   section_id: section.id,
                   quick_add: section.settings.quick_add,
+                  quick_view: section.settings.enable_quick_view,
                   product_view_context: 'collection'
                 %}
               </li>
@@ -468,6 +469,13 @@
           "label": "t:sections.main-collection-product-grid.settings.quick_add.options.option_3"
         }
       ]
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_quick_view",
+      "default": false,
+      "label": "t:sections.main-collection-product-grid.settings.enable_quick_view.label",
+      "info": "t:sections.main-collection-product-grid.settings.enable_quick_view.info"
     },
     {
       "type": "header",
