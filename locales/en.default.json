@@ -111,6 +111,13 @@
       "choose_product_options": "Choose options for {{ product_name }}",
       "quick_view": "Quick view",
       "quick_view_product": "Quick view {{ product_name }}",
+      "notify_me": {
+        "intro": "This variant is sold out. Leave your email and we'll let you know when it's back.",
+        "email_label": "Email",
+        "submit": "Notify me",
+        "success": "Thanks! We'll email you when it's back in stock.",
+        "message": "Notify me when {{ product }} ({{ variant }}) is back in stock: {{ url }}"
+      },
       "description": "Description",
       "inventory_in_stock": "In stock",
       "inventory_in_stock_show_count": "{{ quantity }} in stock",

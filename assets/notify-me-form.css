@@ -1,0 +1,29 @@
+.notify-me-form {
+  margin: 1rem 0 0;
+}
+
+.notify-me-form__intro {
+  margin: 0 0 1rem;
+  font-size: 1.4rem;
+}
+
+.notify-me-form__fields {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.notify-me-form__fields .field {
+  flex: 1 1 22rem;
+}
+
+.notify-me-form__submit {
+  flex-shrink: 0;
+}
+
+.notify-me-form__success {
+  margin: 0;
+  font-size: 1.4rem;
+  font-weight: 600;
+}

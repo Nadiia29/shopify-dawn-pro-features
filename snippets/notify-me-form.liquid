@@ -1,0 +1,48 @@
+{% comment %}
+  Renders an email capture form shown when the selected variant is sold out,
+  using Shopify's built-in contact form (no app required) so merchants get
+  an email with which product and variant a customer wants restocked.
+
+  Accepts:
+  - product: {Object} the product object
+  - variant: {Object} the currently selected or first available variant
+
+  Usage:
+  {% render 'notify-me-form', product: product, variant: variant %}
+{% endcomment %}
+{%- if variant == null or variant.available == false -%}
+  {{ 'notify-me-form.css' | asset_url | stylesheet_tag }}
+  <div class="notify-me-form">
+    {%- form 'contact', id: 'NotifyMeForm-' | append: section.id, class: 'notify-me-form__form' -%}
+      {%- if form.posted_successfully? -%}
+        <p class="notify-me-form__success" role="status">{{ 'products.product.notify_me.success' | t }}</p>
+      {%- else -%}
+        <p class="notify-me-form__intro">{{ 'products.product.notify_me.intro' | t }}</p>
+        <input
+          type="hidden"
+          name="contact[body]"
+          value="{{ 'products.product.notify_me.message' | t: product: product.title, variant: variant.title, url: product.url }}"
+        >
+        <div class="notify-me-form__fields">
+          <div class="field">
+            <input
+              type="email"
+              name="contact[email]"
+              id="NotifyMeEmail-{{ section.id }}"
+              class="field__input"
+              autocomplete="email"
+              placeholder="{{ 'products.product.notify_me.email_label' | t }}"
+              required
+            >
+            <label class="field__label" for="NotifyMeEmail-{{ section.id }}">
+              {{ 'products.product.notify_me.email_label' | t }}
+            </label>
+          </div>
+          <button type="submit" class="button button--secondary notify-me-form__submit">
+            {{ 'products.product.notify_me.submit' | t }}
+          </button>
+        </div>
+      {%- endif -%}
+    {%- endform -%}
+  </div>
+{%- endif -%}
