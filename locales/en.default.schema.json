@@ -2356,6 +2356,10 @@
         "enable_sticky_info": {
           "label": "Sticky content"
         },
+        "enable_sticky_add_to_cart": {
+          "label": "Sticky add to cart bar",
+          "info": "Shows a condensed add to cart bar once the customer scrolls past the main buy buttons"
+        },
         "gallery_layout": {
           "label": "Layout",
           "options__1": {

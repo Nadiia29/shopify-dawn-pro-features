@@ -1,0 +1,54 @@
+{% comment %}
+  Renders a condensed add-to-cart bar fixed to the bottom of the viewport,
+  shown once the main add-to-cart button scrolls out of view. Submits the
+  same form as the main buy buttons instead of duplicating cart logic.
+
+  Accepts:
+  - product: {Object} the product object
+  - section: {Object} the main-product section
+  - product_form_id: {String} id of the main product form
+
+  Usage:
+  {% render 'sticky-add-to-cart', product: product, section: section, product_form_id: product_form_id %}
+{% endcomment %}
+{%- if section.settings.enable_sticky_add_to_cart and product.selected_or_first_available_variant -%}
+  {%- assign current_variant = product.selected_or_first_available_variant -%}
+  {{ 'sticky-add-to-cart.css' | asset_url | stylesheet_tag }}
+  <script src="{{ 'sticky-add-to-cart.js' | asset_url }}" defer="defer"></script>
+  <sticky-add-to-cart
+    class="sticky-add-to-cart color-{{ section.settings.color_scheme }} gradient"
+    data-observe="ProductSubmitButton-{{ section.id }}"
+  >
+    <div class="sticky-add-to-cart__inner page-width">
+      {%- if product.featured_media -%}
+        <img
+          class="sticky-add-to-cart__image"
+          src="{{ product.featured_media | image_url: width: 100 }}"
+          alt=""
+          width="50"
+          height="{{ 50 | divided_by: product.featured_media.aspect_ratio }}"
+          loading="lazy"
+        >
+      {%- endif -%}
+      <div class="sticky-add-to-cart__title-price">
+        <p class="sticky-add-to-cart__title h5">{{ product.title | escape }}</p>
+        {%- render 'price', product: product, use_variant: true, show_badges: false -%}
+      </div>
+      <button
+        type="submit"
+        form="{{ product_form_id }}"
+        name="add"
+        class="sticky-add-to-cart__button button{% if current_variant.available == false %} button--secondary{% endif %}"
+        {% if current_variant.available == false %}
+          disabled
+        {% endif %}
+      >
+        {%- if current_variant.available -%}
+          {{ 'products.product.add_to_cart' | t }}
+        {%- else -%}
+          {{ 'products.product.sold_out' | t }}
+        {%- endif -%}
+      </button>
+    </div>
+  </sticky-add-to-cart>
+{%- endif -%}
