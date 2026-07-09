@@ -2,7 +2,23 @@
 
 A Shopify theme built on top of [Dawn](https://github.com/Shopify/dawn) (v15.5.0, Online Store 2.0) with a set of custom, production-style features layered on top — built as a portfolio piece to demonstrate real Shopify theme-development skills: Liquid, the Ajax Cart/Section-Rendering APIs, metafields, theme editor schema, and performance-conscious front-end JS.
 
-Live dev store preview: ask for a link. Repo: `Nadiia29/shopify-dawn-pro-features`.
+**Live demo:** _link here once the store preview is shared_
+**Video walkthrough:** _link here once recorded — see `docs/demo-recording-script.md`_
+
+Repo: `Nadiia29/shopify-dawn-pro-features`.
+
+## Screenshots
+
+| | |
+|---|---|
+| ![Hero banner](docs/screenshots/hero-banner.png) | ![Product page](docs/screenshots/product-page.png) |
+| Homepage | Product page |
+| ![Cart drawer](docs/screenshots/cart-drawer.png) | ![Predictive search](docs/screenshots/predictive-search.png) |
+| Cart drawer with free-shipping bar | Predictive search |
+| ![Quick view modal](docs/screenshots/quick-view-modal.png) | ![Mobile view](docs/screenshots/mobile-view.png) |
+| Quick view modal | Mobile view |
+
+_(Placeholders — drop PNGs into `docs/screenshots/` with the filenames above; shot list in `docs/demo-recording-script.md`.)_
 
 ## Why build on Dawn instead of from scratch
 
