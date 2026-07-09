@@ -10,3 +10,8 @@ Thumbs.db
 .shopify
 node_modules
 *.zip
+
+# Secrets - never commit API tokens
+.env
+.env.*
+*.token
