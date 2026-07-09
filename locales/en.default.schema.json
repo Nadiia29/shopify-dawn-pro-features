@@ -297,6 +297,10 @@
         "predictive_search_show_price": {
           "label": "Product price",
           "info": "Shown when search suggestions enabled"
+        },
+        "predictive_search_popular_searches": {
+          "label": "Popular searches",
+          "info": "Comma-separated list of suggested search terms, shown before the customer starts typing"
         }
       }
     },

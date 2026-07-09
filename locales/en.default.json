@@ -244,7 +244,8 @@
       "title": "Search results",
       "search_for": "Search for “{{ terms }}”",
       "suggestions": "Suggestions",
-      "pages": "Pages"
+      "pages": "Pages",
+      "popular_searches": "Popular searches"
     },
     "cart": {
       "cart": "Cart"

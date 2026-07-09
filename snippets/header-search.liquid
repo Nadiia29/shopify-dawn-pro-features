@@ -85,6 +85,33 @@
               {%- render 'loading-spinner', class: 'predictive-search__loading-state' -%}
             </div>
 
+            {%- if settings.predictive_search_popular_searches != blank -%}
+              {{ 'predictive-search-popular.css' | asset_url | stylesheet_tag }}
+              <div class="predictive-search--popular" data-predictive-search-popular>
+                <p class="predictive-search__popular-heading text-body caption-with-letter-spacing">
+                  {{ 'templates.search.popular_searches' | t }}
+                </p>
+                <ul class="predictive-search__popular-list list-unstyled" role="list">
+                  {%- assign popular_search_terms = settings.predictive_search_popular_searches | split: ',' -%}
+                  {%- for term in popular_search_terms -%}
+                    {%- assign term = term | strip -%}
+                    {%- if term != blank -%}
+                      <li>
+                        <button
+                          type="button"
+                          class="predictive-search__popular-term"
+                          data-popular-search-term="{{ term | escape }}"
+                        >
+                          {{ term }}
+                        </button>
+                      </li>
+                    {%- endif -%}
+                  {%- endfor -%}
+                </ul>
+              </div>
+              <script src="{{ 'predictive-search-popular.js' | asset_url }}" defer="defer"></script>
+            {%- endif -%}
+
             <span class="predictive-search-status visually-hidden" role="status" aria-hidden="true"></span>
           {%- endif -%}
         </form>

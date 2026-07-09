@@ -1,0 +1,60 @@
+.predictive-search--popular {
+  display: none;
+  position: absolute;
+  top: calc(100% + 0.1rem);
+  left: -0.1rem;
+  width: calc(100% + 0.2rem);
+  border-width: var(--popup-border-width);
+  border-style: solid;
+  border-color: rgba(var(--color-foreground), var(--popup-border-opacity));
+  background-color: rgb(var(--color-background));
+  z-index: 3;
+  border-bottom-right-radius: var(--popup-corner-radius);
+  border-bottom-left-radius: var(--popup-corner-radius);
+  box-shadow: var(--popup-shadow-horizontal-offset) var(--popup-shadow-vertical-offset) var(--popup-shadow-blur-radius)
+    rgba(var(--color-shadow), var(--popup-shadow-opacity));
+  padding: 1.5rem;
+}
+
+predictive-search[data-popular-open] .predictive-search--popular {
+  display: block;
+}
+
+predictive-search[data-popular-open] [data-predictive-search] {
+  display: none;
+}
+
+.predictive-search__popular-heading {
+  margin: 0 0 1rem;
+}
+
+.predictive-search__popular-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin: 0;
+  padding: 0;
+}
+
+.predictive-search__popular-term {
+  padding: 0.6rem 1.4rem;
+  border: 0.1rem solid rgba(var(--color-foreground), 0.15);
+  border-radius: 3rem;
+  background: transparent;
+  cursor: pointer;
+  font-size: 1.3rem;
+  color: rgb(var(--color-foreground));
+}
+
+.predictive-search__popular-term:hover {
+  border-color: rgb(var(--color-foreground));
+}
+
+@media screen and (max-width: 749px) {
+  .predictive-search--popular {
+    right: 0;
+    left: 0;
+    top: 100%;
+    width: auto;
+  }
+}
