@@ -24,6 +24,15 @@
   <script src="{{ 'quick-order-list.js' | asset_url }}" defer="defer"></script>
 {%- endif -%}
 
+{%- if section.settings.enable_quick_view -%}
+  {{ 'quick-add.css' | asset_url | stylesheet_tag }}
+  {{ 'quick-view.css' | asset_url | stylesheet_tag }}
+  <script src="{{ 'quick-view.js' | asset_url }}" defer="defer"></script>
+  {%- if section.settings.quick_add == 'none' -%}
+    <script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
+  {%- endif -%}
+{%- endif -%}
+
 {%- style -%}
   .section-{{ section.id }}-padding {
     padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
