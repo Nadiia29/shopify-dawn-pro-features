@@ -284,6 +284,9 @@
       "announcement": "Announcement",
       "announcement_bar": "Announcement bar"
     },
+    "testimonials": {
+      "rating": "Rated {{ rating }} out of {{ rating_max }} stars"
+    },
 
     "header": {
       "announcement": "Announcement",

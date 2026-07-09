@@ -1,0 +1,233 @@
+{{ 'component-slider.css' | asset_url | stylesheet_tag }}
+{{ 'component-rating.css' | asset_url | stylesheet_tag }}
+{{ 'section-testimonials.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+<div class="color-{{ section.settings.color_scheme }} gradient">
+  <div class="page-width section-{{ section.id }}-padding">
+    {%- unless section.settings.heading == blank -%}
+      <div class="title-wrapper-with-link title-wrapper--no-top-margin">
+        <h2 class="title {{ section.settings.heading_size }}">{{ section.settings.heading | escape }}</h2>
+      </div>
+    {%- endunless -%}
+
+    <slider-component class="slider-mobile-gutter">
+      <ul
+        class="testimonials-list contains-content-container grid grid--1-col-tablet-down grid--3-col-desktop slider slider--tablet grid--peek"
+        id="Slider-{{ section.id }}"
+        role="list"
+      >
+        {%- for block in section.blocks -%}
+          {%- case block.type -%}
+            {%- when 'testimonial' -%}
+              <li
+                id="Slide-{{ section.id }}-{{ forloop.index }}"
+                class="testimonials-list__item grid__item slider__slide"
+                {{ block.shopify_attributes }}
+              >
+                <div class="testimonial-card content-container">
+                  {%- if block.settings.rating > 0 -%}
+                    <div
+                      class="rating"
+                      role="img"
+                      aria-label="{{ 'sections.testimonials.rating' | t: rating: block.settings.rating, rating_max: 5 }}"
+                    >
+                      <span
+                        aria-hidden="true"
+                        class="rating-star"
+                        style="--rating: {{ block.settings.rating }}; --rating-max: 5; --rating-decimal: 0;"
+                      ></span>
+                    </div>
+                  {%- endif -%}
+                  {%- if block.settings.quote != blank -%}
+                    <blockquote class="testimonial-card__quote rte">{{ block.settings.quote }}</blockquote>
+                  {%- endif -%}
+                  <div class="testimonial-card__author">
+                    {%- if block.settings.avatar != blank -%}
+                      {{
+                        block.settings.avatar
+                        | image_url: width: 80
+                        | image_tag: width: 40, height: 40, class: 'testimonial-card__avatar', loading: 'lazy'
+                      }}
+                    {%- endif -%}
+                    <div>
+                      {%- if block.settings.author != blank -%}
+                        <p class="testimonial-card__author-name">{{ block.settings.author | escape }}</p>
+                      {%- endif -%}
+                      {%- if block.settings.author_title != blank -%}
+                        <p class="testimonial-card__author-title caption-with-letter-spacing">
+                          {{ block.settings.author_title | escape }}
+                        </p>
+                      {%- endif -%}
+                    </div>
+                  </div>
+                </div>
+              </li>
+          {%- endcase -%}
+        {%- endfor -%}
+      </ul>
+
+      {%- if section.blocks.size > 1 -%}
+        <div class="slider-buttons">
+          <button
+            type="button"
+            class="slider-button slider-button--prev"
+            name="previous"
+            aria-label="{{ 'general.slider.previous_slide' | t }}"
+          >
+            <span class="svg-wrapper">{{ 'icon-caret.svg' | inline_asset_content }}</span>
+          </button>
+          <div class="slider-counter caption">
+            <span class="slider-counter--current">1</span>
+            <span aria-hidden="true"> / </span>
+            <span class="visually-hidden">{{ 'general.slider.of' | t }}</span>
+            <span class="slider-counter--total">{{ section.blocks.size }}</span>
+          </div>
+          <button
+            type="button"
+            class="slider-button slider-button--next"
+            name="next"
+            aria-label="{{ 'general.slider.next_slide' | t }}"
+          >
+            <span class="svg-wrapper">{{ 'icon-caret.svg' | inline_asset_content }}</span>
+          </button>
+        </div>
+      {%- endif -%}
+    </slider-component>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Testimonials",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "default": "What our customers say",
+      "label": "Heading"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "options": [
+        {
+          "value": "h2",
+          "label": "t:sections.all.heading_size.options__1.label"
+        },
+        {
+          "value": "h1",
+          "label": "t:sections.all.heading_size.options__2.label"
+        },
+        {
+          "value": "h0",
+          "label": "t:sections.all.heading_size.options__3.label"
+        }
+      ],
+      "default": "h1",
+      "label": "t:sections.all.heading_size.label"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "scheme-1"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 36
+    }
+  ],
+  "blocks": [
+    {
+      "type": "testimonial",
+      "name": "Testimonial",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "avatar",
+          "label": "Avatar"
+        },
+        {
+          "type": "range",
+          "id": "rating",
+          "min": 0,
+          "max": 5,
+          "step": 1,
+          "default": 5,
+          "label": "Rating (0 to hide)"
+        },
+        {
+          "type": "richtext",
+          "id": "quote",
+          "default": "<p>Share what a customer loved about their experience.</p>",
+          "label": "Quote"
+        },
+        {
+          "type": "text",
+          "id": "author",
+          "default": "Customer name",
+          "label": "Author name"
+        },
+        {
+          "type": "text",
+          "id": "author_title",
+          "default": "Verified buyer",
+          "label": "Author title"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Testimonials",
+      "blocks": [
+        {
+          "type": "testimonial"
+        },
+        {
+          "type": "testimonial"
+        },
+        {
+          "type": "testimonial"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

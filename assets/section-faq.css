@@ -1,0 +1,14 @@
+.faq {
+  max-width: 76rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.faq .title {
+  text-align: center;
+  margin: 0 0 3rem;
+}
+
+.faq__list .accordion:first-child {
+  margin-top: 0;
+}
