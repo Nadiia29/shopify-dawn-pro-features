@@ -336,6 +336,16 @@
             "label": "Collection",
             "info": "Shown when cart drawer is empty"
           }
+        },
+        "free_shipping_bar": {
+          "header": "Free shipping bar",
+          "enable": {
+            "label": "Show free shipping progress bar"
+          },
+          "threshold": {
+            "label": "Free shipping threshold",
+            "info": "Amount needed to unlock free shipping, in your store's default currency"
+          }
         }
       }
     },

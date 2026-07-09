@@ -1,0 +1,41 @@
+.free-shipping-bar {
+  padding: 1.2rem 0 1.6rem;
+}
+
+.free-shipping-bar__message {
+  margin: 0 0 0.8rem;
+  font-size: 1.3rem;
+  letter-spacing: 0.04rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.free-shipping-bar__message--success {
+  color: rgb(var(--color-foreground));
+  font-weight: 600;
+}
+
+.free-shipping-bar__message--success .svg-wrapper {
+  width: 1.4rem;
+  height: 1.4rem;
+  flex-shrink: 0;
+}
+
+.free-shipping-bar__track {
+  height: 0.5rem;
+  border-radius: var(--inputs-radius, 0.5rem);
+  background: rgba(var(--color-foreground), 0.08);
+  overflow: hidden;
+}
+
+.free-shipping-bar__fill {
+  height: 100%;
+  border-radius: inherit;
+  background: rgb(var(--color-foreground));
+  transition: width var(--duration-default, 200ms) ease;
+}
+
+.free-shipping-bar__fill--complete {
+  background: rgb(var(--color-success, var(--color-foreground)));
+}
