@@ -41,6 +41,30 @@
           "settings": {
             "share_label": "Share"
           }
+        },
+        "tab_care": {
+          "type": "metafield_tab",
+          "settings": {
+            "heading": "Care instructions",
+            "metafield": "custom.care_instructions",
+            "icon": "washing"
+          }
+        },
+        "tab_materials": {
+          "type": "metafield_tab",
+          "settings": {
+            "heading": "Materials",
+            "metafield": "custom.materials",
+            "icon": "leather"
+          }
+        },
+        "tab_shipping": {
+          "type": "metafield_tab",
+          "settings": {
+            "heading": "Shipping & returns",
+            "metafield": "custom.shipping_returns",
+            "icon": "truck"
+          }
         }
       },
       "block_order": [
@@ -51,7 +75,10 @@
         "quantity_selector",
         "buy_buttons",
         "description",
-        "share"
+        "share",
+        "tab_care",
+        "tab_materials",
+        "tab_shipping"
       ],
       "settings": {
         "enable_sticky_info": true,

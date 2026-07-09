@@ -2063,6 +2063,19 @@
             }
           }
         },
+        "metafield_tab": {
+          "name": "Tab (from metafield)",
+          "settings": {
+            "heading": {
+              "label": "Heading",
+              "default": "Tab"
+            },
+            "metafield": {
+              "label": "Metafield",
+              "info": "Format: namespace.key, e.g. custom.care_instructions. Manage metafield definitions under Settings > Custom data > Products. The tab is hidden automatically when the product has no value for it."
+            }
+          }
+        },
         "collapsible_tab": {
           "name": "Collapsible row",
           "settings": {
