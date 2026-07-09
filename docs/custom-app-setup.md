@@ -1,3 +1,5 @@
+> **Update:** we went through this and it dead-ended — Shopify's current Dev Dashboard has no way to link an already-existing dev store to the Partner org that owns the app (`shopify app execute` errors with "Could not find store ... in organization ...", and the Dev Dashboard's Stores page only offers "Create new store"). We pivoted to a CSV import instead — see [`docs/demo-data/README.md`](demo-data/README.md). Leaving this doc here in case that changes in a future Shopify CLI/Dashboard release.
+
 # Creating a Custom App Access Token (for demo content)
 
 Needed once, temporarily, so I can create the Bloom Home products/collections/metafields/images via the Admin API instead of you doing it by hand. Safe to revoke right after.
