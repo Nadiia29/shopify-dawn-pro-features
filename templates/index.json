@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "image_banner": {
@@ -6,15 +15,15 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "Browse our latest products",
+            "heading": "Simple, beautiful essentials for the home you love",
             "heading_size": "h0"
           }
         },
         "button": {
           "type": "buttons",
           "settings": {
-            "button_label_1": "Shop all",
-            "button_link_1": "shopify://collections/all",
+            "button_label_1": "Shop new arrivals",
+            "button_link_1": "shopify://collections/new-arrivals",
             "button_style_secondary_1": true,
             "button_label_2": "",
             "button_link_2": "",
@@ -27,35 +36,35 @@
         "button"
       ],
       "settings": {
+        "image": "shopify://shop_images/banner.avif",
         "image_overlay_opacity": 40,
         "image_height": "large",
-        "desktop_content_position": "bottom-center",
-        "show_text_box": false,
         "image_behavior": "none",
+        "desktop_content_position": "bottom-center",
         "desktop_content_alignment": "center",
+        "show_text_box": false,
         "color_scheme": "scheme-3",
-        "mobile_content_alignment": "center",
         "stack_images_on_mobile": false,
+        "mobile_content_alignment": "center",
         "show_text_below": false
       }
     },
     "featured_collection": {
       "type": "featured-collection",
       "settings": {
+        "collection": "all",
+        "products_to_show": 8,
         "title": "Featured products",
         "heading_size": "h2",
         "description": "",
         "show_description": false,
         "description_style": "body",
-        "collection": "all",
-        "products_to_show": 8,
         "columns_desktop": 4,
-        "color_scheme": "scheme-1",
+        "enable_desktop_slider": false,
         "full_width": false,
         "show_view_all": true,
         "view_all_style": "solid",
-        "enable_desktop_slider": false,
-        "swipe_on_mobile": false,
+        "color_scheme": "scheme-1",
         "image_ratio": "adapt",
         "image_shape": "default",
         "show_secondary_image": true,
@@ -64,6 +73,7 @@
         "quick_add": "none",
         "enable_quick_view": true,
         "columns_mobile": "2",
+        "swipe_on_mobile": false,
         "padding_top": 44,
         "padding_bottom": 36
       }
@@ -71,14 +81,50 @@
     "logo_slider": {
       "type": "logo-slider",
       "blocks": {
-        "logo-1": { "type": "logo" },
-        "logo-2": { "type": "logo" },
-        "logo-3": { "type": "logo" },
-        "logo-4": { "type": "logo" }
+        "logo-1": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/badge-hand-finished.svg",
+            "alt_text": "",
+            "link": ""
+          }
+        },
+        "logo-2": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/badge-sustainably-sourced.svg",
+            "alt_text": "",
+            "link": ""
+          }
+        },
+        "logo-3": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/badge-carbon-neutral-shipping.svg",
+            "alt_text": "",
+            "link": ""
+          }
+        },
+        "logo-4": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/badge-30-day-returns.svg",
+            "alt_text": "",
+            "link": ""
+          }
+        }
       },
-      "block_order": ["logo-1", "logo-2", "logo-3", "logo-4"],
+      "block_order": [
+        "logo-1",
+        "logo-2",
+        "logo-3",
+        "logo-4"
+      ],
       "settings": {
-        "heading": "As featured in",
+        "heading": "Small details, done right",
+        "heading_size": "h2",
+        "enable_animation": true,
+        "color_scheme": "",
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -86,13 +132,42 @@
     "testimonials": {
       "type": "testimonials",
       "blocks": {
-        "testimonial-1": { "type": "testimonial" },
-        "testimonial-2": { "type": "testimonial" },
-        "testimonial-3": { "type": "testimonial" }
+        "testimonial-1": {
+          "type": "testimonial",
+          "settings": {
+            "rating": 5,
+            "quote": "<p>\"The ribbed vase is even better in person — it's become the first thing people notice when they walk in. Ordered a second one for my sister.\"<br/></p>",
+            "author": "Olena M.",
+            "author_title": "Verified buyer"
+          }
+        },
+        "testimonial-2": {
+          "type": "testimonial",
+          "settings": {
+            "rating": 5,
+            "quote": "<p>\"I've bought candles from a dozen brands and the Fig & Cedar one is the only scent that doesn't give me a headache after an hour. Subtle in the best way.</p>",
+            "author": "Daniel R",
+            "author_title": "Verified buyer"
+          }
+        },
+        "testimonial-3": {
+          "type": "testimonial",
+          "settings": {
+            "rating": 5,
+            "quote": "<p>\"The linen throw softened up after just one wash, exactly like they said it would. Worth every penny — this is the blanket that's always on the sofa now.\"</p>",
+            "author": "Priya K.",
+            "author_title": "Verified buyer"
+          }
+        }
       },
-      "block_order": ["testimonial-1", "testimonial-2", "testimonial-3"],
+      "block_order": [
+        "testimonial-1",
+        "testimonial-2",
+        "testimonial-3"
+      ],
       "settings": {
         "heading": "What our customers say",
+        "heading_size": "h1",
         "color_scheme": "scheme-2",
         "padding_top": 52,
         "padding_bottom": 52
@@ -123,8 +198,16 @@
           }
         }
       },
-      "block_order": ["question-1", "question-2", "question-3"],
+      "block_order": [
+        "question-1",
+        "question-2",
+        "question-3"
+      ],
       "settings": {
+        "heading": "Frequently asked questions",
+        "heading_size": "h1",
+        "open_first": true,
+        "color_scheme": "",
         "padding_top": 52,
         "padding_bottom": 52
       }
