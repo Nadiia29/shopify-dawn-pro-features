@@ -135,6 +135,7 @@
         "testimonial-1": {
           "type": "testimonial",
           "settings": {
+            "avatar": "shopify://shop_images/customer_girl.jpg",
             "rating": 5,
             "quote": "<p>\"The ribbed vase is even better in person — it's become the first thing people notice when they walk in. Ordered a second one for my sister.\"<br/></p>",
             "author": "Olena M.",
@@ -144,6 +145,7 @@
         "testimonial-2": {
           "type": "testimonial",
           "settings": {
+            "avatar": "shopify://shop_images/customer_man.avif",
             "rating": 5,
             "quote": "<p>\"I've bought candles from a dozen brands and the Fig & Cedar one is the only scent that doesn't give me a headache after an hour. Subtle in the best way.</p>",
             "author": "Daniel R",
@@ -153,6 +155,7 @@
         "testimonial-3": {
           "type": "testimonial",
           "settings": {
+            "avatar": "shopify://shop_images/ustomer.avif",
             "rating": 5,
             "quote": "<p>\"The linen throw softened up after just one wash, exactly like they said it would. Worth every penny — this is the blanket that's always on the sofa now.\"</p>",
             "author": "Priya K.",
@@ -176,29 +179,45 @@
     "faq": {
       "type": "faq",
       "blocks": {
+        "question_tayFJ4": {
+          "type": "question",
+          "settings": {
+            "question": "What is your return policy?",
+            "answer": "<p>We accept returns within 30 days of delivery, as long as the item is unused and in its original packaging.</p>"
+          }
+        },
+        "question_ULRkdH": {
+          "type": "question",
+          "settings": {
+            "question": "How long does shipping take?",
+            "answer": "<p>Orders ship within 1-2 business days. Delivery typically takes 3-5 business days within the country.<br/></p>"
+          }
+        },
         "question-1": {
           "type": "question",
           "settings": {
-            "question": "What are your shipping times?",
-            "answer": "<p>Orders ship within 1-2 business days and typically arrive within 5-7 business days.</p>"
+            "question": "Are your products handmade?",
+            "answer": "<p>Most of our ceramics and textiles are hand-finished in small batches, so slight variations in glaze, weave, or color are part of the character, not a flaw.</p>"
           }
         },
         "question-2": {
           "type": "question",
           "settings": {
-            "question": "Do you accept returns?",
-            "answer": "<p>Yes, unworn items can be returned within 30 days of delivery for a full refund.</p>"
+            "question": "How do I care for my linen pieces?",
+            "answer": "<p>Machine wash cold on a gentle cycle and tumble dry low, or line dry. Linen softens with every wash, so it only gets better over time.</p>"
           }
         },
         "question-3": {
           "type": "question",
           "settings": {
-            "question": "How can I track my order?",
-            "answer": "<p>You'll receive a tracking link by email as soon as your order ships.</p>"
+            "question": "Do you ship internationally?",
+            "answer": "<p>Currently we ship within the country only. We're working on expanding to more regions soon.</p>"
           }
         }
       },
       "block_order": [
+        "question_tayFJ4",
+        "question_ULRkdH",
         "question-1",
         "question-2",
         "question-3"
