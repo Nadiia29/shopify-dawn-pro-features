@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 64" width="280" height="64">
+  <circle cx="28" cy="32" r="18" fill="#8A9A82"/>
+  <path d="M28 42 C28 42 18 34 18 25 C18 20 22 17 26 19 C27 20 28 22 28 24 C28 22 29 20 30 19 C34 17 38 20 38 25 C38 34 28 42 28 42 Z" fill="#F7F3EC"/>
+  <text x="58" y="39" font-family="Georgia, 'Times New Roman', serif" font-size="20" fill="#2B2622">Sustainably sourced</text>
+</svg>
