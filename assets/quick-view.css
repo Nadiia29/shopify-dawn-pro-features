@@ -22,11 +22,11 @@
   opacity: 1;
 }
 
-@media (hover: none) {
+/* @media (hover: none) {
   .quick-view__button {
     opacity: 1;
   }
-}
+} */
 
 .quick-view__button .svg-wrapper {
   width: 1.8rem;
