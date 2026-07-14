@@ -17,16 +17,15 @@
   transition: opacity var(--duration-default, 200ms) ease;
 }
 
-.card__media:hover .quick-view__button,
-.quick-view__button:focus-visible {
+.card:hover .quick-view__button {
   opacity: 1;
 }
 
-/* @media (hover: none) {
+@media (hover: none) {
   .quick-view__button {
     opacity: 1;
   }
-} */
+}
 
 .quick-view__button .svg-wrapper {
   width: 1.8rem;

@@ -10,10 +10,20 @@
   Usage:
   {% render 'notify-me-form', product: product, variant: variant %}
 {% endcomment %}
-{%- if variant == null or variant.available == false -%}
+{% comment %} {%- if variant == null or variant.available == false -%} {% endcomment %}
+{% comment %} {{ 'notify-me-form.css' | asset_url | stylesheet_tag }}
+
+<div
+  class="notify-me-form"
+  {% if variant.available %}
+    hidden
+  {% endif %}
+>
+</div> {% endcomment %}
   {{ 'notify-me-form.css' | asset_url | stylesheet_tag }}
   <div class="notify-me-form">
-    {%- form 'contact', id: 'NotifyMeForm-' | append: section.id, class: 'notify-me-form__form' -%}
+    {% assign notify_form_id = 'NotifyMeForm-' | append: section.id %}
+    {%- form 'contact', id: notify_form_id, class: 'notify-me-form__form' -%}
       {%- if form.posted_successfully? -%}
         <p class="notify-me-form__success" role="status">{{ 'products.product.notify_me.success' | t }}</p>
       {%- else -%}
@@ -45,4 +55,4 @@
       {%- endif -%}
     {%- endform -%}
   </div>
-{%- endif -%}
+{% comment %} {%- endif -%} {% endcomment %}

@@ -217,6 +217,26 @@ if (!customElements.get('product-info')) {
             window.variantStrings.soldOut
           );
 
+          const newNotifyForm = html.querySelector(`#NotifyMeForm-${this.sectionId}`);
+          const currentNotifyForm = this.querySelector(`#NotifyMeForm-${this.dataset.section}`);
+
+          if (newNotifyForm && currentNotifyForm) {
+            currentNotifyForm.innerHTML = newNotifyForm.innerHTML;
+            currentNotifyForm.hidden = newNotifyForm.hidden;
+          }
+
+          const productButtons = this.querySelector(`#ProductButtons-${this.dataset.section}`);
+
+          if (productButtons && currentNotifyForm) {
+            if (variant.available) {
+              productButtons.hidden = false;
+              currentNotifyForm.hidden = true;
+            } else {
+              productButtons.hidden = true;
+              currentNotifyForm.hidden = false;
+            }
+          }
+
           publish(PUB_SUB_EVENTS.variantChange, {
             data: {
               sectionId: this.sectionId,
