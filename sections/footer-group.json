@@ -13,6 +13,26 @@
   "sections": {
     "footer": {
       "type": "footer",
+      "blocks": {
+        "link_list_ze8zFj": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Shop",
+            "menu": "shop"
+          }
+        },
+        "link_list_fWQFJb": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Customer Care",
+            "menu": "customer-care"
+          }
+        }
+      },
+      "block_order": [
+        "link_list_ze8zFj",
+        "link_list_fWQFJb"
+      ],
       "settings": {
         "color_scheme": "scheme-1",
         "newsletter_enable": true,
