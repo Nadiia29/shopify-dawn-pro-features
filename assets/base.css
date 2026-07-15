@@ -10,7 +10,8 @@ collection-component {
   --alpha-badge-border: 0.1;
   --focused-base-outline: 0.2rem solid rgba(var(--color-foreground), 0.5);
   --focused-base-outline-offset: 0.3rem;
-  --focused-base-box-shadow: 0 0 0 0.3rem rgb(var(--color-background)), 0 0 0.5rem 0.4rem rgba(var(--color-foreground), 0.3);
+  --focused-base-box-shadow: 0 0 0 0.3rem rgb(var(--color-background)),
+    0 0 0.5rem 0.4rem rgba(var(--color-foreground), 0.3);
 }
 
 .product-card-wrapper .card,
@@ -1335,15 +1336,14 @@ button.shopify-payment-button__button--unbranded {
 
 shopify-accelerated-checkout {
   --shopify-accelerated-checkout-button-border-radius: var(--buttons-radius-outset);
-  --shopify-accelerated-checkout-button-box-shadow: var(--shadow-horizontal-offset) var(--shadow-vertical-offset) var(--shadow-blur-radius)
-  rgba(var(--color-shadow), var(--shadow-opacity));
+  --shopify-accelerated-checkout-button-box-shadow: var(--shadow-horizontal-offset) var(--shadow-vertical-offset)
+    var(--shadow-blur-radius) rgba(var(--color-shadow), var(--shadow-opacity));
 }
 shopify-accelerated-checkout-cart {
   --shopify-accelerated-checkout-button-border-radius: var(--buttons-radius-outset);
-  --shopify-accelerated-checkout-button-box-shadow: var(--shadow-horizontal-offset) var(--shadow-vertical-offset) var(--shadow-blur-radius)
-  rgba(var(--color-shadow), var(--shadow-opacity));
+  --shopify-accelerated-checkout-button-box-shadow: var(--shadow-horizontal-offset) var(--shadow-vertical-offset)
+    var(--shadow-blur-radius) rgba(var(--color-shadow), var(--shadow-opacity));
 }
-
 
 /* Button - other */
 
@@ -2400,7 +2400,7 @@ input[type='checkbox'] {
 
   .header--middle-left {
     grid-template-areas: 'heading navigation icons';
-    grid-template-columns: auto auto 1fr;
+    grid-template-columns: 1fr auto 1fr;
     column-gap: 2rem;
   }
 
@@ -2787,6 +2787,7 @@ details[open] > .header__submenu {
 @media screen and (min-width: 990px) {
   .header__inline-menu {
     display: block;
+    justify-self: center;
   }
 
   .header--top-center .header__inline-menu {
@@ -2841,11 +2842,15 @@ details[open] > .header__menu-item .icon-caret {
   transition: text-decoration-thickness var(--duration-short) ease;
   color: rgb(var(--color-foreground));
   text-decoration: underline;
-  text-underline-offset: 0.3rem;
+  text-underline-offset: 0.4rem;
 }
 
 .header__menu-item:hover .header__active-menu-item {
   text-decoration-thickness: 0.2rem;
+}
+
+.header__inline-menu .header__menu-item span {
+  font-size: 1.8rem;
 }
 
 .header__submenu {
@@ -2950,6 +2955,20 @@ details-disclosure > details {
   background: rgb(var(--color-background));
   background: var(--gradient-background);
   background-attachment: fixed;
+}
+
+.utility-bar.color-scheme-1.gradient {
+  filter: brightness(0.92);
+}
+
+#shopify-section-template--21791671189662__logo_slider .color-scheme-1.gradient {
+  --color-background: 235, 235, 230;
+  --gradient-background: rgb(235, 235, 230);
+}
+
+#shopify-section-template--21791671189662__faq .color-scheme-1.gradient {
+  --color-background: 235, 235, 230;
+  --gradient-background: rgb(235, 235, 230);
 }
 
 @media screen and (forced-colors: active) {
