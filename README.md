@@ -2,10 +2,10 @@
 
 A Shopify theme built on top of [Dawn](https://github.com/Shopify/dawn) (v15.5.0, Online Store 2.0) with a set of custom, production-style features layered on top — built as a portfolio piece to demonstrate real Shopify theme-development skills: Liquid, the Ajax Cart/Section-Rendering APIs, metafields, theme editor schema, and performance-conscious front-end JS.
 
-**Live demo:** https://dawn-pro-features.myshopify.com/
-**Video walkthrough:** _link here once recorded — see `docs/demo-recording-script.md`_
+**🌐 Live Store:** https://dawn-pro-features.myshopify.com/
+**🎥 Video Walkthrough:** _link here once recorded — see `docs/demo-recording-script.md`_
 
-Repo: [Nadiia29/shopify-dawn-pro-features](https://github.com/Nadiia29/shopify-dawn-pro-features)
+**📦 Repository:** [Nadiia29/shopify-dawn-pro-features](https://github.com/Nadiia29/shopify-dawn-pro-features)
 
 ## Screenshots
 
@@ -35,7 +35,7 @@ Nearly every modern Shopify store is a Dawn-based child theme. Building on Dawn 
 | Quick View Modal           | Eye-icon preview modal on every product card, not just multi-variant ones                 | [docs/quick-view-modal.md](docs/quick-view-modal.md)               |
 | Variant Picker             | "Notify me" email capture when the selected variant is sold out                           | [docs/variant-picker.md](docs/variant-picker.md)                   |
 | Homepage sections          | New FAQ, Testimonials, and Logo Slider sections                                           | [docs/homepage-sections.md](docs/homepage-sections.md)             |
-| Speed optimization         | Audit + fixes for duplicate assets, lazy loading, deferred scripts                        | [docs/performance.md](docs/performance.md)                         |
+| Speed optimization         | Audit + fixes for duplicate assets, lazy loading, deferred scripts                        | [docs/performance.md](docs/performance.md) 
 
 Each doc explains the problem, the approach, the key files touched, and — importantly — calls out where Dawn _already_ solved part of the problem, so the write-up is honest about what's actually new versus what's reused.
 
