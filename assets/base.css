@@ -2971,6 +2971,16 @@ details-disclosure > details {
   --gradient-background: rgb(235, 235, 230);
 }
 
+.logo-slider-section {
+  --color-background: 235, 235, 230;
+  --gradient-background: rgb(235, 235, 230);
+}
+
+.faq-section {
+  --color-background: 235, 235, 230;
+  --gradient-background: rgb(235, 235, 230);
+}
+
 @media screen and (forced-colors: active) {
   .icon {
     color: CanvasText;
