@@ -21,7 +21,12 @@
 >
 </div> {% endcomment %}
   {{ 'notify-me-form.css' | asset_url | stylesheet_tag }}
-  <div class="notify-me-form">
+  <div
+    class="notify-me-form"
+    {% if variant.available %}
+      hidden
+    {% endif %}
+  >
     {% assign notify_form_id = 'NotifyMeForm-' | append: section.id %}
     {%- form 'contact', id: notify_form_id, class: 'notify-me-form__form' -%}
       {%- if form.posted_successfully? -%}
