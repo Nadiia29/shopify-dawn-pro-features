@@ -2,21 +2,21 @@
 
 A Shopify theme built on top of [Dawn](https://github.com/Shopify/dawn) (v15.5.0, Online Store 2.0) with a set of custom, production-style features layered on top — built as a portfolio piece to demonstrate real Shopify theme-development skills: Liquid, the Ajax Cart/Section-Rendering APIs, metafields, theme editor schema, and performance-conscious front-end JS.
 
-**Live demo:** _link here once the store preview is shared_
+**Live demo:** https://dawn-pro-features.myshopify.com/
 **Video walkthrough:** _link here once recorded — see `docs/demo-recording-script.md`_
 
-Repo: `Nadiia29/shopify-dawn-pro-features`.
+Repo: [Nadiia29/shopify-dawn-pro-features](https://github.com/Nadiia29/shopify-dawn-pro-features)
 
 ## Screenshots
 
-| | |
-|---|---|
-| ![Hero banner](docs/screenshots/hero-banner.png) | ![Product page](docs/screenshots/product-page.png) |
-| Homepage | Product page |
-| ![Cart drawer](docs/screenshots/cart-drawer.png) | ![Predictive search](docs/screenshots/predictive-search.png) |
-| Cart drawer with free-shipping bar | Predictive search |
-| ![Quick view modal](docs/screenshots/quick-view-modal.png) | ![Mobile view](docs/screenshots/mobile-view.png) |
-| Quick view modal | Mobile view |
+|                                                            |                                                              |
+| ---------------------------------------------------------- | ------------------------------------------------------------ |
+| ![Hero banner](docs/screenshots/hero-banner.png)           | ![Product page](docs/screenshots/product-page.png)           |
+| Homepage                                                   | Product page                                                 |
+| ![Cart drawer](docs/screenshots/cart-drawer.png)           | ![Predictive search](docs/screenshots/predictive-search.png) |
+| Cart drawer with free-shipping bar                         | Predictive search                                            |
+| ![Quick view modal](docs/screenshots/quick-view-modal.png) | ![Mobile view](docs/screenshots/mobile-view.png)             |
+| Quick view modal                                           | Mobile view                                                  |
 
 _(Placeholders — drop PNGs into `docs/screenshots/` with the filenames above; shot list in `docs/demo-recording-script.md`.)_
 
@@ -26,18 +26,18 @@ Nearly every modern Shopify store is a Dawn-based child theme. Building on Dawn 
 
 ## Features
 
-| Feature | What it does | Docs |
-|---|---|---|
-| AJAX Cart Drawer | Free-shipping progress bar in the cart drawer, merchant-configurable threshold | [docs/ajax-cart-drawer.md](docs/ajax-cart-drawer.md) |
-| Predictive Search | "Popular searches" suggestions shown before the customer types anything | [docs/predictive-search.md](docs/predictive-search.md) |
+| Feature                    | What it does                                                                              | Docs                                                               |
+| -------------------------- | ----------------------------------------------------------------------------------------- | ------------------------------------------------------------------ |
+| AJAX Cart Drawer           | Free-shipping progress bar in the cart drawer, merchant-configurable threshold            | [docs/ajax-cart-drawer.md](docs/ajax-cart-drawer.md)               |
+| Predictive Search          | "Popular searches" suggestions shown before the customer types anything                   | [docs/predictive-search.md](docs/predictive-search.md)             |
 | Product Tabs on Metafields | Accordion tabs driven by product metafields instead of manually-typed content per product | [docs/product-tabs-metafields.md](docs/product-tabs-metafields.md) |
-| Sticky Add to Cart | Condensed buy bar fixed to the bottom of the screen once the main CTA scrolls out of view | [docs/sticky-add-to-cart.md](docs/sticky-add-to-cart.md) |
-| Quick View Modal | Eye-icon preview modal on every product card, not just multi-variant ones | [docs/quick-view-modal.md](docs/quick-view-modal.md) |
-| Variant Picker | "Notify me" email capture when the selected variant is sold out | [docs/variant-picker.md](docs/variant-picker.md) |
-| Homepage sections | New FAQ, Testimonials, and Logo Slider sections | [docs/homepage-sections.md](docs/homepage-sections.md) |
-| Speed optimization | Audit + fixes for duplicate assets, lazy loading, deferred scripts | [docs/performance.md](docs/performance.md) |
+| Sticky Add to Cart         | Condensed buy bar fixed to the bottom of the screen once the main CTA scrolls out of view | [docs/sticky-add-to-cart.md](docs/sticky-add-to-cart.md)           |
+| Quick View Modal           | Eye-icon preview modal on every product card, not just multi-variant ones                 | [docs/quick-view-modal.md](docs/quick-view-modal.md)               |
+| Variant Picker             | "Notify me" email capture when the selected variant is sold out                           | [docs/variant-picker.md](docs/variant-picker.md)                   |
+| Homepage sections          | New FAQ, Testimonials, and Logo Slider sections                                           | [docs/homepage-sections.md](docs/homepage-sections.md)             |
+| Speed optimization         | Audit + fixes for duplicate assets, lazy loading, deferred scripts                        | [docs/performance.md](docs/performance.md)                         |
 
-Each doc explains the problem, the approach, the key files touched, and — importantly — calls out where Dawn *already* solved part of the problem, so the write-up is honest about what's actually new versus what's reused.
+Each doc explains the problem, the approach, the key files touched, and — importantly — calls out where Dawn _already_ solved part of the problem, so the write-up is honest about what's actually new versus what's reused.
 
 ## Tech stack
 
