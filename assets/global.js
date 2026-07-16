@@ -287,7 +287,6 @@ function debounce(fn, wait) {
   };
 }
 
-
 function throttle(fn, delay) {
   let lastCall = 0;
   return function (...args) {
@@ -676,6 +675,20 @@ class BulkModal extends HTMLElement {
 
 customElements.define('bulk-modal', BulkModal);
 
+// class ModalOpener extends HTMLElement {
+//   constructor() {
+//     super();
+
+//     const button = this.querySelector('button');
+
+//     if (!button) return;
+//     button.addEventListener('click', () => {
+//       const modal = document.querySelector(this.getAttribute('data-modal'));
+//       if (modal) modal.show(button);
+//     });
+//   }
+// }
+
 class ModalOpener extends HTMLElement {
   constructor() {
     super();
@@ -683,9 +696,19 @@ class ModalOpener extends HTMLElement {
     const button = this.querySelector('button');
 
     if (!button) return;
-    button.addEventListener('click', () => {
+
+    button.addEventListener('click', (event) => {
+      event.preventDefault();
+      event.stopPropagation();
+      event.stopImmediatePropagation();
+
       const modal = document.querySelector(this.getAttribute('data-modal'));
-      if (modal) modal.show(button);
+
+      if (modal) {
+        modal.show(button);
+      }
+
+      return false;
     });
   }
 }
@@ -1410,51 +1433,39 @@ if (!customElements.get('bulk-add')) {
 }
 
 class CartPerformance {
-  static #metric_prefix = "cart-performance"
+  static #metric_prefix = 'cart-performance';
 
   static createStartingMarker(benchmarkName) {
-    const metricName = `${CartPerformance.#metric_prefix}:${benchmarkName}`
+    const metricName = `${CartPerformance.#metric_prefix}:${benchmarkName}`;
     return performance.mark(`${metricName}:start`);
   }
 
   static measureFromEvent(benchmarkName, event) {
-    const metricName = `${CartPerformance.#metric_prefix}:${benchmarkName}`
+    const metricName = `${CartPerformance.#metric_prefix}:${benchmarkName}`;
     const startMarker = performance.mark(`${metricName}:start`, {
-      startTime: event.timeStamp
+      startTime: event.timeStamp,
     });
 
     const endMarker = performance.mark(`${metricName}:end`);
 
-    performance.measure(
-      metricName,
-      `${metricName}:start`,
-      `${metricName}:end`
-    );
+    performance.measure(metricName, `${metricName}:start`, `${metricName}:end`);
   }
 
   static measureFromMarker(benchmarkName, startMarker) {
-    const metricName = `${CartPerformance.#metric_prefix}:${benchmarkName}`
+    const metricName = `${CartPerformance.#metric_prefix}:${benchmarkName}`;
     const endMarker = performance.mark(`${metricName}:end`);
 
-    performance.measure(
-      metricName,
-      startMarker.name,
-      `${metricName}:end`
-    );
+    performance.measure(metricName, startMarker.name, `${metricName}:end`);
   }
 
   static measure(benchmarkName, callback) {
-    const metricName = `${CartPerformance.#metric_prefix}:${benchmarkName}`
+    const metricName = `${CartPerformance.#metric_prefix}:${benchmarkName}`;
     const startMarker = performance.mark(`${metricName}:start`);
 
     callback();
 
     const endMarker = performance.mark(`${metricName}:end`);
 
-    performance.measure(
-      metricName,
-      `${metricName}:start`,
-      `${metricName}:end`
-    );
+    performance.measure(metricName, `${metricName}:start`, `${metricName}:end`);
   }
 }
