@@ -11,53 +11,44 @@
   {% render 'notify-me-form', product: product, variant: variant %}
 {% endcomment %}
 {% comment %} {%- if variant == null or variant.available == false -%} {% endcomment %}
-{% comment %} {{ 'notify-me-form.css' | asset_url | stylesheet_tag }}
 
+{{ 'notify-me-form.css' | asset_url | stylesheet_tag }}
 <div
   class="notify-me-form"
+  id="NotifyMeForm-{{ section.id }}"
   {% if variant.available %}
     hidden
   {% endif %}
 >
-</div> {% endcomment %}
-  {{ 'notify-me-form.css' | asset_url | stylesheet_tag }}
-  <div
-    class="notify-me-form"
-    {% if variant.available %}
-      hidden
-    {% endif %}
-  >
-    {% assign notify_form_id = 'NotifyMeForm-' | append: section.id %}
-    {%- form 'contact', id: notify_form_id, class: 'notify-me-form__form' -%}
-      {%- if form.posted_successfully? -%}
-        <p class="notify-me-form__success" role="status">{{ 'products.product.notify_me.success' | t }}</p>
-      {%- else -%}
-        <p class="notify-me-form__intro">{{ 'products.product.notify_me.intro' | t }}</p>
-        <input
-          type="hidden"
-          name="contact[body]"
-          value="{{ 'products.product.notify_me.message' | t: product: product.title, variant: variant.title, url: product.url }}"
-        >
-        <div class="notify-me-form__fields">
-          <div class="field">
-            <input
-              type="email"
-              name="contact[email]"
-              id="NotifyMeEmail-{{ section.id }}"
-              class="field__input"
-              autocomplete="email"
-              placeholder="{{ 'products.product.notify_me.email_label' | t }}"
-              required
-            >
-            <label class="field__label" for="NotifyMeEmail-{{ section.id }}">
-              {{ 'products.product.notify_me.email_label' | t }}
-            </label>
-          </div>
-          <button type="submit" class="button button--secondary notify-me-form__submit">
-            {{ 'products.product.notify_me.submit' | t }}
-          </button>
+  {%- form 'contact', class: 'notify-me-form__form' -%}
+    {%- if form.posted_successfully? -%}
+      <p class="notify-me-form__success" role="status">{{ 'products.product.notify_me.success' | t }}</p>
+    {%- else -%}
+      <p class="notify-me-form__intro">{{ 'products.product.notify_me.intro' | t }}</p>
+      <input
+        type="hidden"
+        name="contact[body]"
+        value="{{ 'products.product.notify_me.message' | t: product: product.title, variant: variant.title, url: product.url }}"
+      >
+      <div class="notify-me-form__fields">
+        <div class="field">
+          <input
+            type="email"
+            name="contact[email]"
+            id="NotifyMeEmail-{{ section.id }}"
+            class="field__input"
+            autocomplete="email"
+            placeholder="{{ 'products.product.notify_me.email_label' | t }}"
+            required
+          >
+          <label class="field__label" for="NotifyMeEmail-{{ section.id }}">
+            {{ 'products.product.notify_me.email_label' | t }}
+          </label>
         </div>
-      {%- endif -%}
-    {%- endform -%}
-  </div>
-{% comment %} {%- endif -%} {% endcomment %}
+        <button type="submit" class="button button--secondary notify-me-form__submit">
+          {{ 'products.product.notify_me.submit' | t }}
+        </button>
+      </div>
+    {%- endif -%}
+  {%- endform -%}
+</div>
