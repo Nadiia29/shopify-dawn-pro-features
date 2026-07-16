@@ -73,10 +73,20 @@
   background: transparent;
 }
 
+.card__inner {
+  pointer-events: none;
+  position: relative;
+  z-index: 2;
+}
+
+.card__media {
+  pointer-events: none;
+}
+
 .card .card__inner .card__media {
   overflow: hidden;
   /* Fix for Safari border bug on hover */
-  z-index: 0;
+  z-index: 2;
   border-radius: calc(var(--border-radius) - var(--border-width) - var(--image-padding));
 }
 
@@ -119,6 +129,7 @@
 
 .card--media .card__inner .card__content {
   position: relative;
+  z-index: 0;
   padding: calc(var(--image-padding) + 1rem);
 }
 
