@@ -54,6 +54,8 @@ if (!customElements.get('quick-view-modal')) {
             productElement.setAttribute(attribute.name, attribute.value.replace(sectionId, uniqueSuffix));
           }
         });
+
+        productElement.setAttribute('data-original-section', sectionId);
         productElement.setAttribute('data-update-url', 'false');
 
         productElement.querySelector('pickup-availability')?.remove();
