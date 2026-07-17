@@ -1,8 +1,9 @@
-# Shopify Dawn — Pro Features
+# Shopify Dawn - Pro Features - Bloom Home
 
-A Shopify theme built on top of [Dawn](https://github.com/Shopify/dawn) (v15.5.0, Online Store 2.0) with a set of custom, production-style features layered on top — built as a portfolio piece to demonstrate real Shopify theme-development skills: Liquid, the Ajax Cart/Section-Rendering APIs, metafields, theme editor schema, and performance-conscious front-end JS.
+A Shopify theme built on top of [Dawn](https://github.com/Shopify/dawn) (v15.5.0, Online Store 2.0) with a set of custom, production-style features layered on top - built as a portfolio piece to demonstrate real Shopify theme-development skills: Liquid, the Ajax Cart/Section-Rendering APIs, metafields, theme editor schema, and performance-conscious front-end JS.
 
-**🌐 Live Store:** https://dawn-pro-features.myshopify.com/
+**🌐 Live Store:** https://bloom-homeee.myshopify.com/
+
 **🎥 Video Walkthrough:** _link here once recorded — see `docs/demo-recording-script.md`_
 
 **📦 Repository:** [Nadiia29/shopify-dawn-pro-features](https://github.com/Nadiia29/shopify-dawn-pro-features)
@@ -11,18 +12,18 @@ A Shopify theme built on top of [Dawn](https://github.com/Shopify/dawn) (v15.5.0
 
 |                                                            |                                                              |
 | ---------------------------------------------------------- | ------------------------------------------------------------ |
-| ![Hero banner](docs/screenshots/hero-banner.png)           | ![Product page](docs/screenshots/product-page.png)           |
+| ![Home page](screenshots/hero_banner.png)                  | ![Full product page](screenshots/catalog.png)           |
 | Homepage                                                   | Product page                                                 |
-| ![Cart drawer](docs/screenshots/cart-drawer.png)           | ![Predictive search](docs/screenshots/predictive-search.png) |
+| ![Cart-drawer](screenshots/cart_drawer.png)                | ![Search](screenshots/search.png) |
 | Cart drawer with free-shipping bar                         | Predictive search                                            |
-| ![Quick view modal](docs/screenshots/quick-view-modal.png) | ![Mobile view](docs/screenshots/mobile-view.png)             |
+| ![Quick view modal](screenshots/modal_view.png)            | ![Mobile-view ](screenshots/adaptive.png)         |
 | Quick view modal                                           | Mobile view                                                  |
 
-_(Placeholders — drop PNGs into `docs/screenshots/` with the filenames above; shot list in `docs/demo-recording-script.md`.)_
+## See [full screenshot gallery](SCREENSHOTS.md) for more.
 
 ## Why build on Dawn instead of from scratch
 
-Nearly every modern Shopify store is a Dawn-based child theme. Building on Dawn — reusing its existing components, JS custom elements, and CSS conventions instead of reinventing them — is the realistic day-to-day work of a Shopify theme developer, and it's what this repo is meant to demonstrate. Every feature below either extends something Dawn already ships, or fills a gap that's genuinely missing, documented in each linked write-up.
+Nearly every modern Shopify store is a Dawn-based child theme. Building on Dawn - reusing its existing components, JS custom elements, and CSS conventions instead of reinventing them - is the realistic day-to-day work of a Shopify theme developer, and it's what this repo is meant to demonstrate. Every feature below either extends something Dawn already ships, or fills a gap that's genuinely missing, documented in each linked write-up.
 
 ## Features
 
@@ -37,14 +38,14 @@ Nearly every modern Shopify store is a Dawn-based child theme. Building on Dawn 
 | Homepage sections          | New FAQ, Testimonials, and Logo Slider sections                                           | [docs/homepage-sections.md](docs/homepage-sections.md)             |
 | Speed optimization         | Audit + fixes for duplicate assets, lazy loading, deferred scripts                        | [docs/performance.md](docs/performance.md) 
 
-Each doc explains the problem, the approach, the key files touched, and — importantly — calls out where Dawn _already_ solved part of the problem, so the write-up is honest about what's actually new versus what's reused.
+Each doc explains the problem, the approach, the key files touched, and - importantly - calls out where Dawn _already_ solved part of the problem, so the write-up is honest about what's actually new versus what's reused.
 
 ## Tech stack
 
 - Shopify Liquid, Online Store 2.0 (JSON templates, sections, blocks)
 - Ajax Cart API + Section Rendering API (no full-page reloads for cart/quick-view/variant changes)
-- Vanilla JS (custom elements, `IntersectionObserver`, no framework/build step — same as Dawn itself)
-- CSS custom properties, no preprocessor — same convention as Dawn
+- Vanilla JS (custom elements, `IntersectionObserver`, no framework/build step - same as Dawn itself)
+- CSS custom properties, no preprocessor - same convention as Dawn
 
 ## Local development
 
@@ -60,7 +61,7 @@ Runs a local server with live reload against your dev store's data.
 shopify theme check
 ```
 
-Lints the theme (also runs in CI on every push/PR — see `.github/workflows/theme-check.yml`).
+Lints the theme (also runs in CI on every push/PR - see `.github/workflows/theme-check.yml`).
 
 ## Metafield setup (for Product Tabs)
 
