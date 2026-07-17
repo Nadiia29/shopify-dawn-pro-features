@@ -4,7 +4,7 @@ A Shopify theme built on top of [Dawn](https://github.com/Shopify/dawn) (v15.5.0
 
 **🌐 Live Store:** https://bloom-homeee.myshopify.com/
 
-**🎥 Video Walkthrough:** _link here once recorded — see `docs/demo-recording-script.md`_
+**🎥 Video Walkthrough:** https://youtu.be/-jH0euxWByk
 
 **📦 Repository:** [Nadiia29/shopify-dawn-pro-features](https://github.com/Nadiia29/shopify-dawn-pro-features)
 
