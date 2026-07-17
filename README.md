@@ -6,6 +6,8 @@ A Shopify theme built on top of [Dawn](https://github.com/Shopify/dawn) (v15.5.0
 
 **🎥 Video Walkthrough:** https://youtu.be/-jH0euxWByk
 
+[![Watch the demo](docs/hero_banner_2.png)](https://youtu.be/-jH0euxWByk)
+
 **📦 Repository:** [Nadiia29/shopify-dawn-pro-features](https://github.com/Nadiia29/shopify-dawn-pro-features)
 
 ## Screenshots
